@@ -1,5 +1,6 @@
 package com.crt.springcloudconfigclient;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +8,7 @@ import org.springframework.cloud.context.refresh.ContextRefresher;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.util.Collections;
 import java.util.Set;
 
 @SpringBootApplication
@@ -30,7 +32,7 @@ public class SpringCloudConfigClientApplication {
 
 		Set<String> updatePropertiesNames = contextRefresher.refresh();
 
-		if(!updatePropertiesNames.isEmpty()){
+		if(CollectionUtils.isNotEmpty(updatePropertiesNames)){
 			System.out.printf("当前配置已更新，具体属性 %s", updatePropertiesNames);
 		}
 	}
