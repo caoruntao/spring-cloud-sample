@@ -1,0 +1,7 @@
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/aspect/ControllerAspect.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/SpringCloudHystrixApplication.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/controller/Controller.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/annotation/TimeOutCircuitBreak.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/interceptor/ErrorInterceptor.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/conf/MyWebMVCConfig.java
+/Users/trustasia/Documents/spring-cloud-hystrix/src/main/java/com/crt/spring/cloud/hystrix/annotation/SemaphoreCircuitBreak.java
