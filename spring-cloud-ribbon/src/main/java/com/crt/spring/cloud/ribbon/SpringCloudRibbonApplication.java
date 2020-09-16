@@ -1,7 +1,9 @@
 package com.crt.spring.cloud.ribbon;
 
 import com.crt.spring.cloud.ribbon.annotation.DiyLoadBalanced;
+import com.crt.spring.cloud.ribbon.annotation.EnableDiyFeignClients;
 import com.crt.spring.cloud.ribbon.interceptor.RestInterceptor;
+import com.crt.spring.cloud.ribbon.service.feign.DiyFeignSayingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +20,7 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableDiyFeignClients(clients = {DiyFeignSayingService.class})
 @EnableScheduling
 public class SpringCloudRibbonApplication {
 

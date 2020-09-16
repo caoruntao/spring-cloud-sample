@@ -51,13 +51,14 @@ public class RestInterceptor implements ClientHttpRequestInterceptor {
     @Override
     public ClientHttpResponse intercept(HttpRequest httpRequest, byte[] bytes, ClientHttpRequestExecution clientHttpRequestExecution) throws IOException {
         URI requestURI = httpRequest.getURI();
-        String serviceName = requestURI.getHost();
-        String uri = requestURI.getPath();
+        String path = requestURI.getPath();
+        String[] splits = path.substring(1).split("/");
+        String serviceName = splits[0];
 
         List<String> addressList = registryList.get(serviceName);
         int nextInt = random.nextInt(addressList.size());
         String address = addressList.get(nextInt);
-        String actualURL = address + uri + "?" + requestURI.getQuery();
+        String actualURL = path.substring(1).replaceAll(serviceName, address) + "?" + requestURI.getQuery();
 
         //restTemplate.getForObject(actualURL, String.class);
         //自定义实现
