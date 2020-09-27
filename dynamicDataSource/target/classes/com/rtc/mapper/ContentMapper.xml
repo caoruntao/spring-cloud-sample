@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rtc.mapper.ContentMapper">
+  <sql id="Base_Column_List">
+    id, request, response
+  </sql>
+  <select id="queryCotents" resultType="com.rtc.entity.Content">
+    select <include refid="Base_Column_List" />
+    from tb_content
+  </select>
+  
+  <insert id="addContent" parameterType="com.rtc.entity.Content">
+  	insert into tb_content values(null, #{request}, #{response});
+  </insert>
+</mapper>
