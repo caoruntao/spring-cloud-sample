@@ -1,7 +1,0 @@
-com/crt/spring/cloud/hystrix/controller/Controller.class
-com/crt/spring/cloud/hystrix/conf/MyWebMVCConfig.class
-com/crt/spring/cloud/hystrix/aspect/ControllerAspect.class
-com/crt/spring/cloud/hystrix/annotation/TimeOutCircuitBreak.class
-com/crt/spring/cloud/hystrix/interceptor/ErrorInterceptor.class
-com/crt/spring/cloud/hystrix/SpringCloudHystrixApplication.class
-com/crt/spring/cloud/hystrix/annotation/SemaphoreCircuitBreak.class

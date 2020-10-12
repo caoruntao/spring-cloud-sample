@@ -1,8 +1,0 @@
-com\rtc\service\ContentService.class
-com\rtc\entity\Content.class
-com\rtc\datasource\DynamicDataSourceHolder.class
-com\rtc\mapper\ContentMapper.class
-com\rtc\controller\ContentController.class
-com\rtc\service\impl\ContentServiceImpl.class
-com\rtc\datasource\DynamicDataSource.class
-com\rtc\aspect\DataSourceAspect.class
