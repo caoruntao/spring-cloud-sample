@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crt.springcloudserviceprovider.mapper.PeopleMapper">
+    <sql id="base_field">
+        id, name, age
+    </sql>
+
+    <select id="test" resultType="com.crt.springcloudserviceprovider.pojo.People">
+        select <include refid="base_field"></include>
+        from tb_people
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+    <select id="find" resultType="com.crt.springcloudserviceprovider.pojo.People">
+        select <include refid="base_field"></include>
+        from tb_people
+        where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.crt.springcloudserviceprovider.pojo.People">
+        select <include refid="base_field"></include>
+        from tb_people
+    </select>
+
+    <insert id="addPeople" useGeneratedKeys="true" keyProperty="id" parameterType="com.crt.springcloudserviceprovider.pojo.People">
+        insert into tb_people(id, name, age) value(null, #{name}, #{age});
+    </insert>
+
+    <update id="updatePeople" parameterType="com.crt.springcloudserviceprovider.pojo.People">
+        update tb_people
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="age != null">
+                age = #{age}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deletePeople" parameterType="int">
+        delete from tb_people where id = #{id}
+    </delete>
+</mapper>
