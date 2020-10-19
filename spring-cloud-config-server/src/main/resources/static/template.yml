@@ -1,0 +1,7 @@
+template:
+  advence:
+    1.2.156.10260.4.1.1:
+      name: 身份识别码
+      required: true
+      type: residenterCardNumber, militaryOfficerCardNumber, passportNumber
+  ee_sign:

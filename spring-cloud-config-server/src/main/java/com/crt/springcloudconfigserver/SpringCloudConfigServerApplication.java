@@ -1,20 +1,15 @@
 package com.crt.springcloudconfigserver;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.environment.Environment;
 import org.springframework.cloud.config.environment.PropertySource;
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.config.server.environment.EnvironmentRepository;
-import org.springframework.cloud.context.refresh.ContextRefresher;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 @SpringBootApplication
 @EnableConfigServer
