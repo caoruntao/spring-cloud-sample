@@ -4,7 +4,7 @@ package com.crt.jpapostgresql.pojo.entity;
  * @author Caort
  * @date 2020/11/2 20:44
  */
-public class Item {
+public class Info {
     private String phone;
     private String email;
 
